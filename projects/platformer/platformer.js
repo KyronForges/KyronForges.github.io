@@ -28,12 +28,12 @@ $(function () {
      * Comment the lines out to remove the grid
      */
 
-    // for (let i = 100; i < canvas.width; i += 100) {
-    //   createPlatform(i, canvas.height, -1, -canvas.height);
-    // }
-    // for (let i = 100; i < canvas.height; i += 100) {
-    //   createPlatform(canvas.width, i, -canvas.width, -1);
-    // }
+    for (let i = 100; i < canvas.width; i += 100) {
+      createPlatform(i, canvas.height, -1, -canvas.height);
+    }
+    for (let i = 100; i < canvas.height; i += 100) {
+      createPlatform(canvas.width, i, -canvas.width, -1);
+    }
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -46,10 +46,12 @@ $(function () {
 
       createPlatform(200,601, 50,50) 
       createPlatform(400,505,60,75)
-      createPlatform(500,602, 79,50)
-      createPlatform(607,500, 70,60)
-      createPlatform(500,200, 50,58)
-      createPlatform(400,250, 80,56)
+      createPlatform(300,602, 79,50)
+      createPlatform(103,700, 70,60)
+      createPlatform(500,40, 50,30)
+      createPlatform(108,350, 80,56)
+      createPlatform(305,230, 80,40)
+      createPlatform(400,200, 60,20)
       
     
     // TODO 2
@@ -68,8 +70,8 @@ $(function () {
     // example usage: createCannon(side, position, delay, width, height)
 
 
-
-
+      createCannon(left)
+      
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
