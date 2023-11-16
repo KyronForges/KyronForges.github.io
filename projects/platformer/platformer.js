@@ -62,7 +62,8 @@ $(function () {
 
     createCollectable("steve", 200, 170, 6, 0.7);
     createCollectable("steve", 300, 170, 7, 0.7);
-
+    createCollectable("steve", 700,500,7,0.7);
+    
 
     // TODO 3
     // Create cannons
@@ -71,8 +72,10 @@ $(function () {
     // example usage: createCannon(side, position, delay, width, height)
 
 
-      createCannon(left)
-      
+      createCannon("left", 100,200, 5,2 )
+      createCannon("bottom",700,300, 6,4)
+      createCannon("top",  100,400, 7,2)
+      createCannon("right",415,500, 8,4)
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
