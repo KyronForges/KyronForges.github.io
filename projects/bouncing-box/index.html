@@ -9,7 +9,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(251, 1, 1)(36, 19, 233);
+			background-color: rgb(33, 4, 224)(36, 19, 233);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -76,14 +76,22 @@
 			*/
 			function update() {
 				moveBoxTo(positionX);
-				positionX = positionX + 10;
-			};
+				positionX = positionX + speed;
+
+                if (positionX > boardWidth) {
+				 speed = - speed
+			 }
+ 
+                if (positionX < 0) {
+                speed = - speed
+				}
+			
+
+              
                
-                
-
-
-
-
+               
+			}
+             
 
 
 			/* 
@@ -91,11 +99,17 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			function handleBoxClick() {
+			   function  handleBoxClick (){
+			  
 				
-				
-				positionX = 0;
+				positionX = 10;
 				points=points+1
+				if (speed > 0){
+					speed = speed+3
+				} else if(speed < 0){
+					speed = speed-3
+				}
+				
                 changeBoxText(points);
                 
 			};
